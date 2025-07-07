@@ -13,11 +13,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
-@Controller
-@RequestMapping("/categoria")
+@Controller //Indica que es un controlador y va a manejar las solicitudes HTTP
+@RequestMapping("/categoria") //Indica que todas las URL que maneja la clase va a empezar con /categoria
 public class CategoriaController {
     
-    @Autowired
+    @Autowired //Inyecta una clase directamente sin tener que inicializarla
     private CategoriaService categoriaService;
     
     @GetMapping("/listado")
