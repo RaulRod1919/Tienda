@@ -71,11 +71,10 @@
                 </div>
             </div>
         </section>
-        
+
         <!-- 3 SecciÃ³n para crear los filtros -->
         <section th:fragment="filtros" class="bg-light">
             <div class="row py-2">
-                <div class="col-md-1"></div>
                 <div class="col-md-3">
                     <form method="POST" th:action="@{/pruebas/query1}" 
                           class="was-validated">
@@ -154,9 +153,31 @@
                         </div>
                     </form>
                 </div>
+                <div class="col-md-3">
+                    <form method="POST" th:action="@{/pruebas/query4}" 
+                          class="was-validated">
+                        <div class="card">                            
+                            <div class="card-body">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="activo" id="activoTrue" value="true" required>
+                                        <label class="form-check-label" for="activoTrue">Activo</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="activo" id="activoFalse" value="false" required>
+                                        <label class="form-check-label" for="activoFalse">Inactivo</label>
+                                </div>
+                            </div>
+                            <div class="card-footer text-center">
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-check"></i> Filtrar
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
         </section>
-</body>
+    </body>
 </html>
 
 
